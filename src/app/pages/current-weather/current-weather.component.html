@@ -1,0 +1,16 @@
+<div class="app-current">
+	<h1>Goededag, type een stad om het actuele weer te zien.</h1>
+	<div>
+		<nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixIconButton">
+			<input type="text" nz-input placeholder="Type een stad" [(ngModel)]="value" [nzAutocomplete]="auto" #city />
+			<nz-autocomplete [nzDataSource]="['Deventer','Amsterdam','Amersfoort','Emmen','Chengdu']" #auto>
+			</nz-autocomplete>
+		</nz-input-group>
+
+		<ng-template #suffixIconButton>
+			<button nz-button nzType="primary" nzSize="large" nzSearch (click)="selectCity(city.value)"><span nz-icon
+					nzType="search"></span></button>
+		</ng-template>
+	</div>
+	<app-show-weather-card *ngIf="weather | async as weather" [weather]="weather"></app-show-weather-card>
+</div>

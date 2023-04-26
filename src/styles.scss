@@ -1,0 +1,54 @@
+:root {
+  --lightgrey: #F6F8FA;
+  --grey: #77818B;
+  --darkgrey: #404040;
+  --highlight-grey: #EAEDF0;
+  --white: #FFFFFF;
+  --darkblue: #242F36;
+  --zorg: #2797d4;
+  --zorg-secondary: #55ABF8;
+  --lightblue: #75898D;
+  --primary: #40a9ff;
+  --darkText: #37394e;
+  --white:#FFFFFF;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+h1 {
+  font: 700 1rem Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font: 500 1.4rem Arial, Helvetica, sans-serif;
+}
+
+p {
+  font: 400 1rem Arial, Helvetica, sans-serif;
+}
+
+li:hover {
+  background: var(--lightblue);
+  color: var(--white);
+}
+
+a {
+  font: normal 0.8rem Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+  padding-bottom: 0.2rem;
+}
+
+img {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font: 700 1.4rem Arial, Helvetica, sans-serif;
+  }
+}

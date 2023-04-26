@@ -1,0 +1,13 @@
+.card{
+  margin-top:3rem;
+  background: #eee;
+  box-shadow: 0 8px 8px -4px var(--finance-secondary);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+span{
+	display: inline-block;
+}
+
+

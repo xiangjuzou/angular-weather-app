@@ -1,0 +1,23 @@
+.comparison-weather, .card-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.ant-input-group-wrapper {
+  border: 1px solid var(--primary);
+}
+
+@media only screen and (min-width: 1280px) {
+  .app-comparison {
+    max-width: 80%;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .app-comparison {
+    max-width: 70%;
+    margin: auto;
+  }
+}

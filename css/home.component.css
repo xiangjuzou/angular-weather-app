@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  padding: 4rem;
+  margin: 3rem 0;
+  border: 1px solid var(--zorg);
+}
+
+img {
+  max-width: 8rem;
+  max-height: 8rem;
+  border-radius: 10%;
+}
+
+.weather-info {
+  text-align: end;
+  align-self: center;
+}
+
+.weather-info img {
+  width: 5rem;
+  height: 5rem;
+}
+
+button:hover {
+  border-radius: 5px;
+  color: var(--zorg);
+  background-color: var(--white);
+  border: 1px solid var(--zorg);
+}
+
+@media only screen and (min-width: 768px) {
+  img {
+    max-width: 24rem;
+    max-height: 24rem;
+    opacity: 0.9;
+  }
+  .app-home {
+    max-width: 50rem;
+    margin: auto;
+  }
+}/*# sourceMappingURL=home.component.css.map */

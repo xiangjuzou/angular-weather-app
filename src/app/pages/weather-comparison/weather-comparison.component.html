@@ -1,0 +1,30 @@
+<div class="app-comparison">
+	<h1> Vergelijken </h1>
+	<p> Alle twee vakjes moeten gevuld werden, dan kunt u de resultaten zien.</p>
+	<div class="comparison-weather">
+		<nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+			<input type="text" nz-input placeholder="Type eerste stad" #city1 [(ngModel)]="value1"
+				[nzAutocomplete]="auto" />
+			<nz-autocomplete [nzDataSource]="['Deventer', 'Amsterdam', 'Amersfoort', 'Emmen', 'Chengdu']" #auto>
+			</nz-autocomplete>
+		</nz-input-group>
+
+		<nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+			<input type="text" nz-input placeholder="Type tweede stad" #city2 [(ngModel)]="value2"
+				[nzAutocomplete]="auto" />
+			<nz-autocomplete [nzDataSource]="['Deventer', 'Amsterdam', 'Amersfoort', 'Emmen', 'Chengdu']" #auto>
+			</nz-autocomplete>
+		</nz-input-group>
+
+		<ng-template #suffixIconButton>
+			<button nz-button nzType="primary" nzSearch (click)="selectCities(city1.value, city2.value)"><span nz-icon
+					nzType="search"></span></button>
+		</ng-template>
+	</div>
+
+	<div class="card-info">
+		<div *ngFor="let weather of weathers | async">
+			<app-show-weather-card [weather]="weather"></app-show-weather-card>
+		</div>
+	</div>
+</div>

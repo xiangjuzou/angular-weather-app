@@ -1,0 +1,23 @@
+<div class="app-weekly">
+	<h1>Goededag, Kies de stad om het weer te zien.</h1>
+
+	<div>
+		<nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+			<input type="text" nz-input placeholder="input city" [(ngModel)]="value" [nzAutocomplete]="auto" #city />
+			<nz-autocomplete [nzDataSource]="['Deventer', 'Amsterdam', 'Amersfoort', 'Emmen', 'Chengdu']" #auto>
+			</nz-autocomplete>
+		</nz-input-group>
+
+		<ng-template #suffixIconButton>
+			<button nz-button nzType="primary" nzSearch (click)="selectCity(city.value)"><span nz-icon
+					nzType="search"></span></button>
+		</ng-template>
+	</div>
+
+	<div class="card" *ngFor="let weather of weathers | async" (click)="showDetail(weather)">
+		<p>{{weather.localtime}} </p>
+		<img [src]="weather.conditionIcon" alt="weather conditon icon" />
+	</div>
+
+	<!--<app-show-weather-card *ngIf="detail" [weather]="detail"></app-show-weather-card>   -->
+</div>

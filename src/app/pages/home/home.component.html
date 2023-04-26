@@ -1,0 +1,19 @@
+<div class="app-home">
+	<h1>Welkom</h1>
+	<p> Wordt het nog één keer volop winterweer of
+		verloopt februari flink zacht met al een vleugje lente? </p>
+	<div class="container">
+		<img src="/assets/lente.jpg" alt="lente">
+		<div class="weather-info" *ngIf="weather | async as weather">
+			<h2> {{weather.locationName}} </h2>
+			<h2>Actuele temperatuur {{weather.temp}} °C</h2>
+			<h2> {{weather.localtime}} </h2>
+			<img [src]="weather.conditionIcon" />
+		</div>
+	</div>
+	<h1>Vooruit kijken?</h1>
+	<p> Het weer vandaag en de weersverwachting tot 5 dagen vooruit.</p>
+	<button routerLink="/forecast" nz-button nzType="primary">
+		Bekijk meer
+	</button>
+</div>

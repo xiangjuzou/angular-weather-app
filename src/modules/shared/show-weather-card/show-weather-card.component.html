@@ -1,0 +1,24 @@
+<div class="card" *ngIf="weather">
+	<p>{{weather.localtime}} </p>
+
+	<div>
+		<span>Land</span>
+		<p> {{weather.country}}</p>
+	</div>
+
+	<div>
+		<span>Stad</span>
+		<p>{{weather.locationName}}</p>
+	</div>
+	<div>
+		<span> Actuele temperatuur</span>
+		<p>{{weather.temp}} °C </p>
+	</div>
+
+	<div>
+		<span> Gevoelstemperatuur</span>
+		<p>{{weather.feelTemp}} °C</p>
+	</div>
+
+	<img [src]="weather.conditionIcon" alt="weather conditon icon" />
+</div>

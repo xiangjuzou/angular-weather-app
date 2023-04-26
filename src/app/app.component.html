@@ -1,0 +1,29 @@
+<header>
+	<img src="../assets/weather-logo.png" routerLinkActive="active" routerLink="/home" />
+	<div>
+		<button [routerLink]="['/home']" routerLinkActive="active" nz-button nzShape="round">
+			<span nz-icon nzType="home"></span>
+			Dashboard
+		</button>
+		<button [routerLink]="['/current']" routerLinkActive="active" nz-button nzShape="round">
+			<span nz-icon nzType="cloud"></span>
+			Huidig
+		</button>
+		<button [routerLink]="['/forecast']" routerLinkActive="active" nz-button nzShape="round">
+			<span nz-icon nzType="rise"></span>
+			Voorspelling
+		</button>
+		<button [routerLink]="['/comparison']" routerLinkActive="active" nz-button nzShape="round">
+			<span nz-icon nzType="team"></span>
+			Vergelijking
+		</button>
+	</div>
+</header>
+
+<div class="content">
+	<router-outlet></router-outlet>
+</div>
+
+<footer>
+	<p> &copy; Weer-online-wereld 2021 </p>
+</footer>

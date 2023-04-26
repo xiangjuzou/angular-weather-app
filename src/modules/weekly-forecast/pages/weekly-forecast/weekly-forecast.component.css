@@ -1,0 +1,16 @@
+
+.app-weekly{
+   display: grid;
+   justify-content: center;
+}
+
+.card {
+	margin-top:2rem;
+	padding:0.5rem;
+    border:1px solid var( --zorg-secondary);
+	border-radius: 5px;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
